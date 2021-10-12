@@ -3,18 +3,15 @@ import 'contact_list_back.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
-import '../my_app.dart';
 
 class ContactList extends StatelessWidget {
   final _back = ContactListBack();
 
    CircleAvatar circleAvatar(String url){
-    try{
-      return CircleAvatar(backgroundImage: NetworkImage(url));
-    }catch(e){
-      return CircleAvatar(child: Icon(Icons.person));
-    }
-  }
+      return (Uri.tryParse(url).isAbsolute)?
+        CircleAvatar(backgroundImage: NetworkImage(url))
+        : CircleAvatar(child: Icon(Icons.person));
+     }
   
    Widget iconEditButton(Function onPressed){
     return IconButton(icon: Icon(Icons.edit), color: Colors.orange, onPressed: onPressed);
@@ -58,7 +55,7 @@ class ContactList extends StatelessWidget {
             IconButton(
                 icon: Icon(Icons.add),
                 onPressed: () {
-                  Navigator.of(context).pushNamed(MyApp.CONTACT_FORM);
+                  _back.goToForm(context); 
                 })
           ],
         ),

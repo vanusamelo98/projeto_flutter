@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:projeto_flutter/app/domain/entities/contact.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactDetailsBack{
@@ -15,18 +15,18 @@ class ContactDetailsBack{
     Navigator.of(context).pop();
   }
 
-  _launchApp(String url, Funtin(BuildContext context) showModalError)async{
+  _launchApp(String url, Function(BuildContext context) showModalError)async{
   await canLaunch(url)? await launch(url): showModalError(context);
 }
-launchPhone(Funtion(BuildContext context) showModalError){
+launchPhone(Function(BuildContext context) showModalError){
   _launchApp('tel:${contact.telefone}',showModalError);
 
 }
-launchSMS(Funtion(BuildContext context) showModalError){
+launchSMS(Function(BuildContext context) showModalError){
   _launchApp('sms:${contact.telefone}',showModalError);
 
 }
-launchEmail(Funtion(BuildContext context) showModalError){
+launchEmail(Function(BuildContext context) showModalError){
   _launchApp('mailto:${contact.email}',showModalError);
 
 }

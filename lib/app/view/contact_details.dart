@@ -60,14 +60,14 @@ showModalError(BuildContext context){
                           color: Colors.blue,
                           icon: Icon(Icons.message),
                           onPressed: (){
-                            _back.launchSMS((showModalError);
+                            _back.launchSMS(showModalError);
                           }
                         ),
                          IconButton(
                           color: Colors.blue,
                           icon: Icon(Icons.phone),
                           onPressed: (){
-                            _back.launchPhone((showModalError);
+                            _back.launchPhone(showModalError);
                             
                           }
                         ),
@@ -80,7 +80,7 @@ showModalError(BuildContext context){
                 child: ListTile(
                   title: Text('E-mail:'),
                   onTap: (){
-                    _back.launchEmail((showModalError);
+                    _back.launchEmail(showModalError);
                   },
                   subtitle: Text('${contact.email}'),
                 ),

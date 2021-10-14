@@ -33,6 +33,10 @@ var _service = GetIt.I.get<ContactService>();
     Navigator.of(context).pushNamed(MyApp.CONTACT_FORM, arguments: contact).then(refreshList);
   }
 
+  goToDetails(BuildContext context, Contact contact){
+    Navigator.of(context).pushNamed(MyApp.CONTACT_DETAILS, arguments: contact);
+  }
+
   //excluir
   remove(int id){
     _service.remove(id); 

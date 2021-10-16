@@ -38,7 +38,7 @@ var _service = GetIt.I.get<ContactService>();
   }
 
   //excluir
-  remove(int id){
+  remove(dynamic id){
     _service.remove(id); 
     refreshList();
   }

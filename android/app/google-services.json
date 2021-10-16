@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "276902649706",
+    "project_id": "projeto-992e0",
+    "storage_bucket": "projeto-992e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276902649706:android:f4aebb4748c6f7d131cf13",
+        "android_client_info": {
+          "package_name": "br.com.vanusa.projeto_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276902649706-mg9q5b9i0emn32r5407oi8o881j42bk0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYIH-XJNi4ot6hPwrHl7EwVbIOqwT40Uc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276902649706-mg9q5b9i0emn32r5407oi8o881j42bk0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
